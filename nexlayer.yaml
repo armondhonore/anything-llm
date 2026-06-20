@@ -1,0 +1,12 @@
+application:
+  name: anythingllm
+  pods:
+    - name: app
+      image: mintplexlabs/anythingllm:latest
+      path: /
+      servicePorts:
+        - 3001
+      volumes:
+        - name: storage
+          mountPath: /app/server/storage
+          size: 10Gi
